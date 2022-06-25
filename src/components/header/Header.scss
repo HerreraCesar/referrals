@@ -4,7 +4,7 @@
   background-color: $light;
   width: 100vw;
   position: fixed;
-  height: 80px;
+  height: $navBarHeight;
   z-index: 20;
   .navbar {
     display: flex;
