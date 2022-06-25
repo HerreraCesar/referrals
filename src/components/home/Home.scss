@@ -1,0 +1,27 @@
+@import "../../variables";
+
+.sections {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(farthest-corner at 10vw 10vh, #4A00E0 0%, #8E2DE2 100%);
+  .top {
+    cursor: pointer;
+    position: fixed;
+    right: calc(((100vw - $width) / 2) / 2);
+    bottom: calc(((100vw - $width) / 2) / 2);
+    transition: all 0.5s;
+    color: $dark;
+    svg {
+      width: 30px;
+      height: 30px;
+      transition: all 0.7s;
+    }
+  }
+  .top:hover svg{
+    transform: rotateY(360deg);
+  }
+}

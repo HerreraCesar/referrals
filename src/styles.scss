@@ -1,0 +1,55 @@
+// VARIABLES
+@import "variables";
+
+// ESTILOS GLOBALES
+* {
+  margin: 0rem;
+  padding: 0rem;
+  font-family: $lato;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: $secondary $shadow;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: $shadow;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: $secondary;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+*::selection {
+  background-color: $secondary;
+  color: $light;
+}
+
+body {
+  background-color: $dark;
+  overflow-x: hidden;
+ /*  background: #8E2DE2;
+  background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+  background: radial-gradient(farthest-corner at 10vw 10vh, #4A00E0 0%, #8E2DE2 100%); */
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+  color: $dark
+}
+
+// IMPORTACIONES PARCIALES
+@import "./components/header/Header.scss";
+@import "./components/home/Home.scss";
+@import "./components/cover-page/CoverPage.scss";
+@import "./components/about/About.scss";
+@import "./components/top/Top.scss";
+@import "./components/catalogue/Catalogue.scss";
+@import "./components/contact/Contact.scss";
+
+// RESPONSIVIDAD
+@import "responsive";

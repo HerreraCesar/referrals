@@ -1,0 +1,44 @@
+@import "../../variables.scss";
+
+.header {
+  background-color: $light;
+  width: 100vw;
+  position: fixed;
+  height: 80px;
+  z-index: 20;
+  .navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    width: $width;
+    margin:auto;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 15;
+    .logo {
+      width: 300px;
+      display: flex;
+      align-items: center;
+      a {
+        color: $dark;
+        font-size: 24px;
+        font-weight: bolder;
+        transition: all 0.3s;
+      }
+    }
+    .logo:hover a{
+      transform: scale(1.1);
+    }
+    .links {
+      display: flex;
+      flex-flow: row nowrap;
+      a {
+        font-size: 16px;
+        color: $placeholder;
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
