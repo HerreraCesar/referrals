@@ -5,6 +5,35 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    //background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    //align-items: center;
+    //background: $dark;
+    .container {
+        margin-top: $navBarHeight;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        width: $width;
+        img {
+            width: 250px;
+            filter: grayscale(100);
+        }
+        div {
+            h1 {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: $light;
+                font-size: 42px;
+                font-weight: bolder;
+            }
+            h2 {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: $light;
+                font-size: 36px;
+                font-weight: bolder;
+                font-style: italic;
+                margin-bottom: 30px;
+            }
+        }
+    }
 }

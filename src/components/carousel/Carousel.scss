@@ -1,0 +1,13 @@
+@import "../../variables";
+
+#carousel {
+    width: 100vw;
+    .legend {
+        background-color: transparent;
+        color: $light;
+        font-size: 16px;
+    }
+    div img {
+        padding: 0 80px;
+    }
+}

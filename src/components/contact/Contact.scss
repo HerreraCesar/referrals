@@ -6,6 +6,91 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    //background: linear-gradient(to right, #000428, #004e92);
-    //background: radial-gradient(farthest-corner at 10vw 10vh, #4A00E0 0%, #8E2DE2 100%);
+    background: $light;
+    flex-flow: column nowrap;
+    position: relative;
+    padding-top: 60px;
+    h3 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+    .email {
+        display: flex;
+        align-items: center;
+        h2 {
+            font-size: 48px;
+            font-weight: bolder;
+            margin-bottom: 40px;
+        }
+        svg {
+            margin-left: 20px;
+            font-size: 36px;
+            cursor: pointer;
+            align-self: center;
+            margin-bottom: 40px;
+        }
+        .copy {
+            position: relative;
+        }
+        .copy::after {
+            content: 'copy';
+            border-radius: $curve;
+            background-color: $placeholder;
+            color: $light;
+            font-size: 14px;
+            padding: 5px 10px;
+            position: absolute;
+            top: -100%;
+            left: 10px;
+            opacity: 0;
+        }
+        .copy:hover::after{
+            opacity: 1;
+        }
+    }
+    .copyright {
+        position: absolute;
+        bottom: 30px;
+        font-size: 14px;
+        color: $placeholder;
+    }
+    .networks {
+        display: flex;
+        div {
+            /* background-color: transparent;
+            width: 80px;
+            height: 80px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border-radius: 50%; */
+            margin: 0 20px;
+            z-index: 3;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg {
+                    font-size: 40px;
+                    color: $shadow;
+                }
+            }
+        }
+        div::after {
+            position: absolute;
+            content: '';
+            background-color: aqua;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            z-index: -1;
+            transform: scale(0);
+            transition: all 0.3s ease-in-out;
+        }
+        div:hover::after {
+            transform: scale(1);
+        }
+        
+    }
 }

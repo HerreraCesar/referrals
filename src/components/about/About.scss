@@ -3,8 +3,42 @@
 #about {
     width: 100vw;
     height: 100vh;
-    display: flex;
+    //background: url('../../../public/assets/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 120px calc((100vw - $width)/2) 60px calc((100vw - $width)/2);
     justify-content: center;
     align-items: center;
-    //background: linear-gradient(to right, #8e2de2, #4a00e0);
+    .card {
+        height: 25rem;
+        background-color: rgb(236, 236, 236);
+        backdrop-filter: blur($blur);
+        border-radius: $curve;
+        //border: solid 1px rgb(151, 151, 151);
+        box-shadow: 10px 10px 0px $shadow;
+        padding: 1.5rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        //transition: all 0.3s ease-in-out;
+        //border: 5px solid transparent;
+        h2 {
+            color: $dark;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: $placeholder;
+            font-weight: 400;
+        }
+    }
+    .card:hover {
+        //border: 5px solid $primary;
+        background-color: $light;
+    }
 }

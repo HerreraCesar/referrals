@@ -6,6 +6,7 @@
   position: fixed;
   height: $navBarHeight;
   z-index: 20;
+  transition: height 0.3s;
   .navbar {
     display: flex;
     flex-flow: row nowrap;
@@ -27,17 +28,39 @@
       }
     }
     .logo:hover a{
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
     .links {
       display: flex;
       flex-flow: row nowrap;
       a {
+        position: relative;
         font-size: 16px;
         color: $placeholder;
-        padding: 0px 10px;
+        padding: 0px 5px;
+        margin: 0px 5px;
         display: flex;
         align-items: center;
+        padding-bottom: 5px;
+      }
+      a::before {
+        transition: transform 0.4s;
+        position: absolute;
+        content: "";
+        width: 100%;
+        //height: 3px;
+        left: 0;
+        bottom: 0;
+        border-bottom: solid 2px $placeholder;
+        transform-origin: right;
+        transform: scaleX(0);
+      }
+      a:hover {
+        color: $dark;
+        &::before {
+          transform-origin: left;
+          transform: scaleX(1);
+        }
       }
     }
   }

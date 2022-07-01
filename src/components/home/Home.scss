@@ -9,12 +9,16 @@
   align-items: center;
   background: radial-gradient(farthest-corner at 10vw 10vh, #4A00E0 0%, #8E2DE2 100%);
   .top {
+    transform: translateY(60px);
+    align-self: flex-end;
+    width: 30px;
+    margin-right: calc(((100vw - $width) / 2) / 2);
+    text-align: end;
     cursor: pointer;
-    position: fixed;
-    right: calc(((100vw - $width) / 2) / 2);
-    bottom: calc(((100vw - $width) / 2) / 2);
-    transition: all 0.5s;
-    color: $dark;
+    position: sticky;
+    top: 80vh;
+    //transition: all 0.5s;
+    color: $light;
     svg {
       width: 30px;
       height: 30px;

@@ -8,4 +8,11 @@
     align-items: center;
     //background: linear-gradient(to right, #ff00cc, #333399);
     //background: radial-gradient(farthest-corner at 15vw 10vh, #4A00E0 0%, #8E2DE2 100%);
+    .list {
+        width: $width;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 12rem);
+        grid-row: auto;
+        grid-gap: 4rem;
+    }
 }
