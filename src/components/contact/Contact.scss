@@ -41,7 +41,7 @@
             font-size: 14px;
             padding: 5px 10px;
             position: absolute;
-            top: -100%;
+            top: -50%;
             left: 10px;
             opacity: 0;
         }
@@ -80,7 +80,7 @@
         div::after {
             position: absolute;
             content: '';
-            background-color: aqua;
+            background-color: #a758ecab;
             width: 80px;
             height: 80px;
             border-radius: 50%;

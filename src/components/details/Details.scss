@@ -1,0 +1,95 @@
+@import "../../variables";
+
+#details {
+  width: 100vw;
+  background-color: $light;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  .shadow {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* width: 100%;
+    height: 100%; */
+    padding: 60px 0px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .background {
+    background-position: center;
+    margin-top: $navBarHeight;
+    //position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+  }
+  .promotion {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 30px rgba(105, 105, 105, 0.5); 
+    border-radius: $curve;
+    backdrop-filter: blur($blur);
+    width: $width;
+    padding: 50px;
+    //margin-top: $navBarHeight;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    h1 {
+        color: $primary;
+        font-size: 64px;
+        font-weight: bolder;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 18px;
+        color: $dark;
+        //columns: 3;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-size: 30px;
+        font-weight: bolder;
+        margin-bottom: 20px;
+    }
+    .step {
+        //box-shadow: inset 0 0 100px $primary;
+        //border: 3px solid $primary;
+      padding: 20px;
+      border-radius: $curve;
+      background-color: rgba(30, 30, 30, 0.8);
+      margin-bottom: 20px;
+      strong {
+        color: $light;
+      }
+      span {
+        font-size: 16px;
+        color: $light;
+        font-weight: 300;
+        //text-shadow: 1px 1px 0px $shadow;
+      }
+    }
+  }
+  .top {
+    transform: translateY(60px);
+    align-self: flex-end;
+    width: 30px;
+    margin-right: calc(((100vw - $width) / 2) / 2);
+    text-align: end;
+    cursor: pointer;
+    position: sticky;
+    top: 80vh;
+    color: $light;
+    z-index: 20;
+    svg {
+      width: 30px;
+      height: 30px;
+      transition: all 0.7s;
+    }
+  }
+  .top:hover svg {
+    transform: rotateY(360deg);
+  }
+}
